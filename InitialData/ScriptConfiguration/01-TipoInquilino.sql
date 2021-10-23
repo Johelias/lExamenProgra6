@@ -36,5 +36,4 @@ FROM dbo.TipoInquilino
 
 SET IDENTITY_INSERT dbo.TipoInquilino OFF
 
-
 GO

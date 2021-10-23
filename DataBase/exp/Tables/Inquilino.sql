@@ -1,7 +1,0 @@
-﻿CREATE TABLE [exp].[Inquilino]
-(
-	[IdInquilino] INT NOT NULL  IDENTITY(1,1) CONSTRAINT PK_Inquilino PRIMARY KEY CLUSTERED(IdInquilino)
- ,  [NombreInquilino] VARCHAR(50) NOT NULL
-)
-WITH (DATA_COMPRESSION = PAGE)
-GO

@@ -4,24 +4,25 @@ SELECT
 Id_TipoInquilino, Descripcion, Estado INTO #TipoInquilinoTemp
 FROM (
 VALUES 
-(1,'','FISICO'),
-(2,'','JURIDICO'),
-(3,'','JURIDICO'),
-(4,'','FISICO')
+(1,'JURIDICO',1),
+(2,'FISICO',1)
+
 )AS TEMP (Id_TipoInquilino, Descripcion, Estado)
 
 ---------Actualizar Datos-------------
+
 	UPDATE T SET 
-	P.Estado=TM.Estado
-	FROM dbo.TipoInquilino P
+		T.Descripcion=TM.Descripcion
+	FROM [dbo].[TipoInquilino] T
 	INNER JOIN #TipoInquilinoTemp TM
-	ON P.Id_TipoInquilino= TM.Id_TipoInquilino
+	ON T.Id_TipoInquilino= TM.Id_TipoInquilino
+
 
 	---------Insertar Datos-------
 
 SET IDENTITY_INSERT dbo.TipoInquilino ON
 
-INSERT INTO dbo.TipoInquilino(
+INSERT INTO  [dbo].[TipoInquilino](
 Id_TipoInquilino, Descripcion, Estado)
 SELECT
 Id_TipoInquilino, Descripcion, Estado
@@ -37,3 +38,4 @@ FROM dbo.TipoInquilino
 SET IDENTITY_INSERT dbo.TipoInquilino OFF
 
 GO
+

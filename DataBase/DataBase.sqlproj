@@ -65,10 +65,10 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="Schema\exp.sql" />
-    <Build Include="dbo\Tables\TipoInquilino.sql" />
-    <Build Include="exp\Tables\Inquilino.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <RefactorLog Include="DataBase.refactorlog" />
+    <Build Include="exp\Tables\TipoInquilino.sql" />
+    <Build Include="exp\StoreProcedures\TipoInquilinoObtener.sql" />
+    <Build Include="exp\StoreProcedures\TipoInquilinoInsertar.sql" />
+    <Build Include="exp\StoreProcedures\TipoInquilinoEliminar.sql" />
+    <Build Include="exp\StoreProcedures\TipoInquilinoActualizar.sql" />
   </ItemGroup>
 </Project>

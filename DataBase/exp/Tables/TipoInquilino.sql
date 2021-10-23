@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[TipoInquilino]
+﻿CREATE TABLE [exp].[TipoInquilino]
 (
 	
 	[Id_TipoInquilino] INT NOT NULL IDENTITY(1,1) CONSTRAINT PK_TipoInquilino PRIMARY KEY CLUSTERED([Id_TipoInquilino])
@@ -7,6 +7,7 @@
 )
 WITH (DATA_COMPRESSION = PAGE)
 GO
+
 
 
 
